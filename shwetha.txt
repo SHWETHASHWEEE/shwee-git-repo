@@ -1,0 +1,10 @@
+pipeline {
+    agent any
+    stages {
+        stage('shwetha') {
+            steps {
+                echo 'This is my pipeline script'
+            }
+        }
+    }
+}
