@@ -9,6 +9,7 @@ pipeline {
                 sh '''
                 echo "Displaying my system uptime"
                 uptime
+                df -kh
                 '''
             }
         }
