@@ -10,6 +10,7 @@ pipeline {
                 echo "Displaying my system uptime"
                 uptime
                 df -kh
+                date
                 '''
             }
         }
