@@ -3,17 +3,19 @@ pipeline {
     stages { 
         stage('shwetha') {
             steps {
-                sh '''
-                echo "This is my first command"
-                '''
-                sh '''
-                echo "Displaying my system uptime"
-                uptime
-                df -kh
-                date
-                '''
-            }
-        }
-    }
-}
-
+                    retry (3) {
+                    sh '''
+                    echo "This is my first command"
+                    '''
+                 sh '''
+                  echo "Displaying my system uptime"
+                  uptime
+                  df -kh
+                  date
+                  '''
+              
+                 }
+             } 
+         }
+     }
+ }
