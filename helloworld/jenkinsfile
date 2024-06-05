@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    stages { 
+        stage('shwetha') {
+            steps {
+                sh '''
+                echo "This is my first command"
+                '''
+                sh '''
+                echo "Displaying my system uptime"
+                uptime
+                '''
+            }
+        }
+    }
+}
+
